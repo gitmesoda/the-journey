@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: black;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 5px;
+  /* Add 'px' to specify the unit */
+}
+
+p {
+  margin: 2px;
+  /* Add 'px' to specify the unit */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tickbox {
+  margin: 2px;
+  /* Add 'px' to specify the unit */
+  font-family: 'Your Funky Font', 'Courier New', Courier, monospace;
+  /* Replace 'Your Funky Font' with the desired font */
+  transition: transform 0.2s ease-in-out;
+  /* Add a smooth transition for the transform property */
+}
+
+.tickbox input {
+  margin-left: 5px;
+  /* Adjust the spacing between the checkbox and the label */
+}
+
+.tickbox label {
+  color: green;
+  /* Set the color of the label to green */
+  cursor: pointer;
+  /* Change the cursor to a pointer on hover */
+}
+
+.tickbox:hover {
+  transform: translateX(10px);
+  /* Move the text 10 pixels to the right on hover */
+}
+
+.image-section {
+  text-align: center;
+  position: relative;
+}
+
+.image-section img {
+  max-width: 30%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(60, 255, 0, 0.87);
+  transition: max-width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+  max-width: 40%;
+  opacity: 0;
+  /* Hide the initial image on hover */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-section img:hover+img {
+  opacity: 1;
+  /* Show the second image on hover */
+  position: relative;
+}
