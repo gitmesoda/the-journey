@@ -19,6 +19,7 @@ h5,
 h6 {
   margin: 5px;
   /* Add 'px' to specify the unit */
+  position: center;
 }
 
 p {
@@ -59,25 +60,43 @@ p {
 }
 
 .image-section img {
-  max-width: 30%;
+  max-width: 10%;
   height: auto;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(60, 255, 0, 0.87);
   transition: max-width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-.image-section img:hover {
-  max-width: 40%;
-  opacity: 0;
-  /* Hide the initial image on hover */
-  position: absolute;
-  top: 0;
-  left: 0;
+/* CSS for adjusting the sizes */
+.work-example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  /* Add a border for separation */
+  padding: 10px;
+  /* Add some padding to the examples for spacing */
+  border-radius: 10px;
+  /* Add rounded corners for a cleaner look */
 }
 
-.image-section img:hover+img {
-  opacity: 1;
-  /* Show the second image on hover */
-  position: relative;
+.example-content {
+  max-width: 100%;
+  /* Set the maximum width for responsiveness */
+  text-align: center;
+}
+
+.example-content img {
+  max-width: 100%;
+  /* Make sure the images don't exceed the content width */
+  height: auto;
+  /* Maintain the aspect ratio */
+}
+
+/* Larger example */
+.work-example.larger {
+  max-width: 70%;
+  /* Adjust the max-width for the larger example */
 }
